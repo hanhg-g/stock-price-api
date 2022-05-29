@@ -59,6 +59,8 @@ app.get('/SPY', (req,res) => {
               })
             
               res.json(articles)
+              articles = []
+              
         }).catch((err) => console.log(err))
         
 
@@ -110,6 +112,8 @@ app.get('/QQQ', (req,res) => {
               })
             
               res.json(articles1)
+              articles1 = []
+
         }).catch((err) => console.log(err))
         
 
