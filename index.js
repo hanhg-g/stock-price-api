@@ -7,7 +7,7 @@ const app = express()
 
 
   
-const articles = []
+let articles = []
 
 
 app.get('/', (req, res) => {
@@ -60,7 +60,7 @@ app.get('/SPY', (req,res) => {
             
               res.json(articles)
               articles = []
-              
+
         }).catch((err) => console.log(err))
         
 
@@ -71,7 +71,7 @@ let Price1 = '';
 let change1 = '';
 let changePer1 = '';
 
-const articles1 = []
+let articles1 = []
 
 app.get('/QQQ', (req,res) => {
 
