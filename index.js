@@ -1,4 +1,4 @@
-const PORT = process.enc.PORT || 8000
+const PORT = process.env.PORT || 8000
 const express = require('express')
 const axios = require('axios')
 const cheerio = require('cheerio')
@@ -69,6 +69,7 @@ let Price1 = '';
 let change1 = '';
 let changePer1 = '';
 
+const articles1 = []
 
 app.get('/QQQ', (req,res) => {
 
@@ -99,7 +100,7 @@ app.get('/QQQ', (req,res) => {
 
 
 
-              articles.push({
+              articles1.push({
           
                 Price1,
                 change1,
@@ -108,7 +109,7 @@ app.get('/QQQ', (req,res) => {
               
               })
             
-              res.json(articles)
+              res.json(articles1)
         }).catch((err) => console.log(err))
         
 
